@@ -8,11 +8,10 @@ function CurrencyConverter({ darkMode }) {
   const [conversionRate, setConversionRate] = useState(null);
   const [convertedAmount, setConvertedAmount] = useState(null);
 
-  const currencies = ["USD", "EUR", "GBP", "PLN", "JPY", "AUD"]; // Można dodać więcej walut.
+  const currencies = ["USD", "EUR", "GBP", "PLN", "JPY", "AUD"];
 
-  // Pobieranie kursów walutowych
   const fetchConversionRate = async () => {
-    const apiKey = "f173196f9d917c8cdaeb8d05"; // Zamień na swój klucz API
+    const apiKey = "f173196f9d917c8cdaeb8d05";
     const url = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/${fromCurrency}`;
 
     try {
@@ -25,21 +24,19 @@ function CurrencyConverter({ darkMode }) {
     }
   };
 
-  // Konwertowanie waluty
   const convertCurrency = () => {
     if (conversionRate !== null && amount !== "") {
       setConvertedAmount((amount * conversionRate).toFixed(2));
     }
   };
 
-  // Hook do pobierania kursu walutowego
   useEffect(() => {
     fetchConversionRate();
   }, [fromCurrency, toCurrency]);
 
   return (
     <div className={`container ${darkMode ? "dark" : "light"}`}>
-      <h2>Konwerter Walut</h2>
+      <h2>Waluty</h2>
       <div>
         <label>
           Kwota:

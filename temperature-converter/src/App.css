@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   font-family: Arial, sans-serif;
   text-align: center;
@@ -47,29 +8,17 @@ body {
   transition: background 0.3s;
 }
 
-/* Kontener na oba konwertery */
 .converters-container {
   display: flex;
-  gap: 20px; /* Odstęp między konwerterami */
+  gap: 30px; 
 }
 
-/* Styl dla obu konwerterów */
-.container {
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  transition: background 0.3s, color 0.3s;
-  text-align: center;
-}
-
-/* Tryb jasny */
 .light {
   background: #ffffff;
   color: #333;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Tryb ciemny */
 .dark {
   background: #333;
   color: white;
@@ -84,7 +33,6 @@ input {
   border-radius: 5px;
 }
 
-/* Przycisk trybu ciemnego w lewym dolnym rogu */
 .toggle-btn {
   position: fixed;
   bottom: 20px;
@@ -102,4 +50,12 @@ input {
 
 .toggle-btn:hover {
   background: rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-size: 42px;
+  font-weight: bold;
+  text-align: center;
+  color: #808080;
+  text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF, 0 0 15px #FFFFFF;
 }

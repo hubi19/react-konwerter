@@ -8,11 +8,12 @@ function App() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    document.body.style.background = darkMode ? "#444" : "#e0e0e0"; // Zmiana tła strony
+    document.body.style.background = darkMode ? "#444" : "#e0e0e0";
   }, [darkMode]);
 
   return (
     <>
+    <h1 className="title">Konwerter</h1>
       <div className="app-container">
         <div className="converters-container">
           <TemperatureConverter darkMode={darkMode} />
@@ -21,7 +22,6 @@ function App() {
         </div>
       </div>
 
-      {/* Przycisk zmiany motywu */}
       <button className="toggle-btn" onClick={() => setDarkMode(!darkMode)}>
         {darkMode ? "🌞 Jasny Tryb" : "🌙 Ciemny Tryb"}
       </button>

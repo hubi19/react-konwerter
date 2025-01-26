@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./temperatureConverter.css";
+import "./currencyConverter.css";
 
 function TemperatureConverter({ darkMode }) {
   const [celsius, setCelsius] = useState("");
@@ -22,7 +22,7 @@ function TemperatureConverter({ darkMode }) {
 
   return (
     <div className={`container ${darkMode ? "dark" : "light"}`}>
-      <h2>Konwerter Temperatury</h2>
+      <h2>Temperatura</h2>
 
       <label>
         Celsjusz:

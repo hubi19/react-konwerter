@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./distanceConverter.css";
+import "./currencyConverter.css";
 
 function DistanceConverter({ darkMode }) {
   const [miles, setMiles] = useState("");
@@ -22,7 +22,7 @@ function DistanceConverter({ darkMode }) {
 
   return (
     <div className={`container ${darkMode ? "dark" : "light"}`}>
-      <h2>Konwerter Dystansu</h2>
+      <h2>Dystans</h2>
 
       <label>
         Mile:
